@@ -1,0 +1,23 @@
+name: vars_cached_matched_train_valid
+seed: 42
+model:
+  input_dim: 768
+  hidden_dim: 768
+  aggregate_projected: false
+  reference_style: false
+training:
+  optimizer: adamw
+  lr: 0.0003
+  eps: 0.00000001
+  weight_decay: 0.0001
+  batch_size: 32
+  eval_batch_size: 64
+  epochs: 60
+  step_size: 15
+  gamma: 0.3
+  workers: 0
+  class_weighted: true
+  class_weight_mode: sqrt_inverse_frequency
+  checkpoint_metric: balanced_macro_composite
+  early_stopping_patience: 10
+  early_stopping_min_epochs: 15

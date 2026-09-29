@@ -1,0 +1,31 @@
+name = "referee-ai-gateway"
+main = "src/index.ts"
+compatibility_date = "2026-09-27"
+
+[vars]
+MAX_FILE_BYTES = "83886080"
+MAX_VIEWS = "4"
+IP_DAILY_LIMIT = "2"
+GLOBAL_DAILY_LIMIT = "20"
+MONTHLY_LIMIT = "200"
+SESSION_TTL_SECONDS = "900"
+ALLOWED_ORIGIN = "https://app.referee-ai.workers.dev"
+
+[[r2_buckets]]
+binding = "UPLOADS"
+bucket_name = "referee-ai-uploads"
+
+[[durable_objects.bindings]]
+name = "GATE"
+class_name = "InferenceGate"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["InferenceGate"]
+
+[triggers]
+crons = ["17 * * * *"]
+
+# Configure secrets with `wrangler secret put`:
+# DEMO_CODE, IP_HASH_SECRET, INFERENCE_SIGNING_SECRET,
+# MODAL_INFERENCE_URL, MODAL_PROXY_KEY, MODAL_PROXY_SECRET

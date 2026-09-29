@@ -1,0 +1,8 @@
+extends: baseline.yaml
+name: dt_gcva_phase2
+model:
+  aggregation_type: dt_gcva
+  fusion_dim: 256
+  fusion_heads: 4
+  fusion_dropout: 0.1
+  view_dropout: 0.2

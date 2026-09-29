@@ -1,0 +1,45 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.egg-info/
+.DS_Store
+.idea/
+.vscode/
+
+# Local secrets and environment overrides. Keep documented examples.
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Python/tool caches
+.cache/
+.coverage
+htmlcov/
+
+# JavaScript build and dependency artifacts
+**/node_modules/
+**/dist/
+*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
+
+# Model, dataset and generated media artifacts
+*.pt
+*.pth
+*.mp4
+!frontend/public/demo/**/*.mp4
+*.zip
+*.jpg
+*.jpeg
+*.png
+*.jsonl
+*.xml
+
+# SoccerNet is access-controlled and must never be committed.
+data/**
+!data/README.md
+
+# Preserve only curated, human-readable experiment reports.
+experiments/**
+!experiments/*.md

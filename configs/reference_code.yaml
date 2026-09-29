@@ -1,0 +1,13 @@
+# Official-code architecture/optimizer comparison, NOT an exact historical run.
+extends: baseline.yaml
+name: vars_reference_code_alignment
+model:
+  representation: kinetics_logits
+  aggregate_projected: true
+  reference_style: true
+  hidden_dim: 400
+training:
+  optimizer: adamw
+  eps: 0.0000001
+  weight_decay: 0.001
+  class_weighted: true

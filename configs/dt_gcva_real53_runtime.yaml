@@ -1,0 +1,15 @@
+extends: tiny_overfit.yaml
+name: phase2_dt_gcva_real53_runtime
+model:
+  aggregation_type: dt_gcva
+  fusion_dim: 256
+  fusion_heads: 4
+  fusion_dropout: 0.1
+  view_dropout: 0.2
+training:
+  # Runtime validation only: initial evaluation + 53 real updates + final evaluation.
+  epochs: 1
+  max_hours: 1
+  stop_on_success: false
+  # Evaluate the saved checkpoint in a fresh process to avoid post-training MPS slowdown.
+  skip_post_epoch_evaluation: true

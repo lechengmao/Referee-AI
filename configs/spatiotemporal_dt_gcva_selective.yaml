@@ -1,0 +1,7 @@
+extends: spatiotemporal_dt_gcva.yaml
+name: spatiotemporal_dt_gcva_cached_selective
+model:
+  pooling_temperature: 0.10
+  attention_entropy_weight: 0.005
+  attention_entropy_floor_ratio: 0.15
+  token_dropout: 0.1

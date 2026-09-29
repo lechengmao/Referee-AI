@@ -1,0 +1,13 @@
+extends: spatiotemporal_dt_gcva.yaml
+name: spatiotemporal_dt_gcva_hierarchical
+model:
+  fusion_strategy: hierarchical
+  view_temperature: 0.25
+  temporal_temperature: 0.20
+  attention_entropy_weight: 0.01
+  attention_entropy_floor_ratio: 0.20
+  token_dropout: 0.10
+loss:
+  foul_task_weight: 1.5
+  severity_task_weight: 1.0
+  focal_gamma: 1.0

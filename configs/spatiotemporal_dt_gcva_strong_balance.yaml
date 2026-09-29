@@ -1,0 +1,4 @@
+extends: spatiotemporal_dt_gcva.yaml
+name: spatiotemporal_dt_gcva_cached_strong_balance
+training:
+  class_weight_mode: inverse_frequency

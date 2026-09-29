@@ -1,0 +1,54 @@
+.access-code {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin: 20px 0 0;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  background: #101b17;
+}
+
+.access-copy > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #b4c1bb;
+}
+
+.access-copy p {
+  margin: 6px 0;
+  color: #77877f;
+  font-size: 10px;
+}
+
+.access-copy a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.access-code input {
+  width: min(260px, 48vw);
+  border: 1px solid #35443d;
+  border-radius: 2px;
+  padding: 11px 13px;
+  font: inherit;
+  color: #eaf4ef;
+  background: #0b1411;
+}
+
+.access-code input:focus {
+  outline: 2px solid rgba(158, 240, 26, .14);
+  border-color: var(--green);
+}
+
+@media (max-width: 600px) {
+  .access-code { align-items: flex-start; flex-direction: column; }
+  .access-code label { width: 100%; }
+  .access-code input { width: 100%; }
+}

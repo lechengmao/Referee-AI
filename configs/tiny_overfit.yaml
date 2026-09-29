@@ -1,0 +1,22 @@
+extends: baseline.yaml
+name: phase1_real53_overfit
+seed: 42
+data:
+  augment: false
+  temporal_jitter: 0.0
+  deterministic: true
+  # All-view backward stalls under unified-memory pressure on this 16 GB M3.
+  # Keep the first two annotated views fixed for both training and TRAIN evaluation.
+  deterministic_views: 2
+training:
+  batch_size: 1
+  eval_batch_size: 1
+  epochs: 8
+  workers: 0
+  lr: 0.00005
+  max_hours: 6
+  stop_on_success: false
+criterion:
+  foul_accuracy: 0.75
+  severity_accuracy: 0.90
+  loss_reduction: 0.70

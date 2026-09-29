@@ -1,0 +1,15 @@
+{
+  "retrieved_date": "2026-09-26",
+  "upstream": "https://github.com/SoccerNet/sn-mvfoul",
+  "note": "Mutable main branch inspected; hashes identify inspected bytes, not a pinned historical commit.",
+  "sha256": {
+    "paper": "fec3f6181705946474de746b342a7405eb28b8596ce4d1ea4c4f5494f4d83fb0",
+    "model": "0c610a8581d2ba85b05e7c0cb7fc52d2ff4082a32991cc6046400023ea9349e7",
+    "aggregate": "162155fc2c3e0a278574e07ac9aed19801253b312f8884230f084019dc38a75d",
+    "main": "33374655a9647f9f5e2012132f92914a4ad7d7d6040cc0d23810a7f35cedd6a6",
+    "dataset": "78c87f44d993062f13a32839a8375dd0e0b800e589cc873b04ab2da350aa2508",
+    "data-loader": "f07b4a9d10b63d69590ba7f117760bd5bea583265799ba82081047e4bec00f16",
+    "classes": "1b82f3d4ab613dd81ca7e7e9dbd8f2add18c8fc152b4f6fff783d28f61bfa8e9",
+    "train": "7203cd2cb903473a62d84f30b64dc9f17183ef206d0cbaf27bd7d7f9912dc8a5"
+  }
+}

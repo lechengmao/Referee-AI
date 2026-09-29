@@ -1,0 +1,28 @@
+# Paper-equation implementation. See docs/BASELINE.md before claiming reproduction.
+name: vars_paper_equations
+seed: 42
+data:
+  center_seconds: 3.0
+  frames: 16
+  duration: 1.0
+  temporal_jitter: 0.125
+  train_views: 2
+  augment: true
+model:
+  pretrained: true
+  representation: embedding
+  hidden_dim: 768
+  aggregate_projected: false
+  reference_style: false
+training:
+  optimizer: adam
+  lr: 0.00005
+  eps: 0.00000001
+  weight_decay: 0.0
+  batch_size: 6
+  eval_batch_size: 1
+  epochs: 7
+  step_size: 3
+  gamma: 0.3
+  class_weighted: false
+  workers: 0
